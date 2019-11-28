@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.yucel.ydskelimekartoyunu.MainActivity">
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/kullaniciText"
+        android:textSize="18sp"
+        android:textColor="?attr/actionMenuTextColor"
+        android:textStyle="normal|bold" />
+
+    <Button
+        android:text="kaydet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/turkce"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="12dp"
+        android:id="@+id/vtKaydet" />
+
+    <Button
+        android:text="listele"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listele"
+        android:layout_alignBaseline="@+id/vtKaydet"
+        android:layout_alignBottom="@+id/vtKaydet"
+        android:layout_toEndOf="@+id/vtKaydet" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="@android:dimen/thumbnail_height"
+        android:layout_below="@+id/kayitSilButton"
+        android:layout_alignStart="@+id/textSil"
+        android:layout_alignParentBottom="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:hint="turkce"
+        android:id="@+id/turkce"
+        android:layout_alignBaseline="@+id/ingilizce"
+        android:layout_alignBottom="@+id/ingilizce"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/kullaniciText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="ingilizce"
+        android:ems="10"
+        android:layout_marginTop="26dp"
+        android:id="@+id/ingilizce"
+        android:layout_below="@+id/kullaniciText"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_toStartOf="@+id/kullaniciText" />
+
+    <Button
+    android:id="@+id/kayitSilButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+        android:text="Kayit Sil"
+        android:layout_alignBottom="@+id/textSil"
+        android:layout_toEndOf="@+id/textSil"
+        android:layout_marginStart="16dp" />
+
+    <EditText
+        android:id="@+id/textSil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="kayit ID"
+        android:layout_below="@+id/vtKaydet"
+        android:layout_alignEnd="@+id/listele" />
+
+    <Button
+        android:id="@+id/oyunuBaslatButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/listele"
+        android:layout_alignBottom="@+id/listele"
+        android:layout_alignParentEnd="true"
+        android:text="OYUNU BASLAT"
+        android:layout_toEndOf="@+id/kayitSilButton"
+        android:layout_alignStart="@+id/turkce" />
+
+
+</RelativeLayout>
